@@ -46,5 +46,30 @@ namespace List_Manipulator
             }
             
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            orig.RemoveAll(num =>  num < 0);
+
+            lBoxResults.Items.Clear();
+
+            foreach(int num in orig)
+            {
+                lBoxResults.Items.Add(num);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            List<int> reults = orig.FindAll(num => num >= 0 && num <= 10);
+
+            lBoxResults.Items.Clear();
+
+            foreach(int num in reults)
+            {
+                lBoxResults.Items.Add(num);
+            }
+
+        }
     }
 }
